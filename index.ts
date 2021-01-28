@@ -1,7 +1,7 @@
 import { Octokit } from "@octokit/rest";
 import { getInput, warning, setFailed } from "@actions/core";
 import { context } from "@actions/github";
-import dateformat from "dateformat";
+import * as dateformat from "dateformat";
 import axios from "axios";
 interface Deployment {
   schemaVersion?: string;

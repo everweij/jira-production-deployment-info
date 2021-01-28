@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 const rest_1 = __nccwpck_require__(5375);
 const core_1 = __nccwpck_require__(2186);
 const github_1 = __nccwpck_require__(5438);
-const dateformat_1 = __nccwpck_require__(1512);
+const dateformat = __nccwpck_require__(1512);
 const axios_1 = __nccwpck_require__(6545);
 const OWNER = github_1.context.payload.repository.owner.login;
 const REPO = github_1.context.payload.repository.name;
@@ -72,7 +72,7 @@ async function informJiraProductionDeployment(issueKeys) {
         displayName: JIRA_INFO["display-name"] || "",
         url: `${github_1.context.payload.repository.url}/actions/runs/${process.env["GITHUB_RUN_ID"]}`,
         description: JIRA_INFO.description || "",
-        lastUpdated: dateformat_1.default(new Date(), "yyyy-mm-dd'T'HH:MM:ss'Z'") || "",
+        lastUpdated: dateformat(new Date(), "yyyy-mm-dd'T'HH:MM:ss'Z'") || "",
         label: JIRA_INFO.label || "",
         state: "successful",
         pipeline: {
