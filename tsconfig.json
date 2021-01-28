@@ -13,9 +13,9 @@
     "moduleResolution": "Node",
     "noUnusedParameters": true,
     "noUnusedLocals": true,
-    "lib": ["ES2018"],
+    "lib": ["ES2020"],
     "skipLibCheck": true,
     "strict": true,
-    "target": "ES2018"
+    "target": "ES2020"
   }
 }

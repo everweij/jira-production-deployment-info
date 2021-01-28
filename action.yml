@@ -1,0 +1,41 @@
+name: "Jira Production Deployment Info"
+description: "Let's you inform Jira which issue keys went to production since latest deployment"
+inputs:
+  cloud-instance-base-url:
+    description: "Jira cloud url"
+    required: true
+  client-id:
+    description: "jira oauth client id"
+    required: true
+  client-secret:
+    description: "jira oauth client secret"
+    required: true
+  display-name:
+    description: ""
+    required: true
+  url:
+    description: ""
+    required: false
+  description:
+    description: ""
+    required: true
+  label:
+    description: ""
+    required: true
+  environment-id:
+    description: ""
+    required: true
+  environment-display-name:
+    description: ""
+    required: true
+  environment-type:
+    description: ""
+    required: true
+  tag-name:
+    description: "Name of the production tag"
+    required: true
+    default: "production"
+
+runs:
+  using: "node12"
+  main: "index.js"
