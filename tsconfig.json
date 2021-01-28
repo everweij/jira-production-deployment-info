@@ -1,0 +1,21 @@
+{
+  "files": ["index.ts"],
+  "compilerOptions": {
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true,
+    "checkJs": false,
+    "declaration": false,
+    "downlevelIteration": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": false,
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "lib": ["ES2018"],
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ES2018"
+  }
+}

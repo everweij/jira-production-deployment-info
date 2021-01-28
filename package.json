@@ -1,0 +1,45 @@
+{
+  "name": "jira-production-deployment-info",
+  "version": "1.0.0",
+  "description": "Let's you inform Jira which issue keys went to production since latest deployment",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf index.js && tsc",
+    "lint": "eslint *.ts -c .eslintrc.js --quiet --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jira",
+    "action",
+    "deployment"
+  ],
+  "author": "Erik",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.11.1",
+    "@typescript-eslint/parser": "^4.11.1",
+    "@types/node": "^14.14.22",
+    "eslint": "^7.16.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.0",
+    "prettier": "^2.2.1",
+    "husky": "^4.3.8",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.1.3",
+    "tslib": "^2.0.3"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": false,
+    "tabWidth": 2,
+    "trailingComma": "none",
+    "arrowParens": "avoid"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run build"
+    }
+  }
+}
