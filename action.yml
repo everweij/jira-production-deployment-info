@@ -35,6 +35,10 @@ inputs:
     description: "Name of the production tag"
     required: true
     default: "production"
+  main-branch:
+    description: "Name of the main branch"
+    required: false
+    default: "master"
 
 runs:
   using: "node12"

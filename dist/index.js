@@ -15,7 +15,7 @@ const dateformat_1 = __nccwpck_require__(1512);
 const axios_1 = __nccwpck_require__(6545);
 const OWNER = github_1.context.payload.repository.owner.login;
 const REPO = github_1.context.payload.repository.name;
-const BRANCH = "master";
+const BRANCH = core_1.getInput("main-branch") || "master";
 const TAG_NAME = core_1.getInput("tag-name");
 const JIRA_INFO = Object.fromEntries([
     "cloud-instance-base-url",

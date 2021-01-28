@@ -48,7 +48,7 @@ interface JiraConfig {
 
 const OWNER = context.payload.repository!.owner.login;
 const REPO = context.payload.repository!.name;
-const BRANCH = "master";
+const BRANCH = getInput("main-branch") || "master";
 const TAG_NAME = getInput("tag-name");
 const JIRA_INFO = (Object.fromEntries(
   [
