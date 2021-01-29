@@ -142,6 +142,8 @@ async function informJiraProductionDeployment(issueKeys: string[]) {
     }
   };
 
+  console.log(deployment);
+
   const {
     data: { cloudId }
   } = await axios.get<{ cloudId: string }>(
