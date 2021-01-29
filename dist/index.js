@@ -87,7 +87,7 @@ async function informJiraProductionDeployment(issueKeys) {
         }
     };
     const { data: { cloudId } } = await axios_1.default.get(`${JIRA_INFO["cloud-instance-base-url"]}/_edge/tenant_info`);
-    const { data: { rejectedDeployments } } = await axios_1.default.post(`https://api.atlassian.com/jira/deployments/0.1/cloud/${cloudId}/bulk"`, deployment, {
+    const { data: { rejectedDeployments } } = await axios_1.default.post(`https://api.atlassian.com/jira/deployments/0.1/cloud/${cloudId}/bulk`, deployment, {
         headers: {
             Authorization: `Bearer ${await getJiraAccessToken()}`
         }

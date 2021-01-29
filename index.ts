@@ -151,7 +151,7 @@ async function informJiraProductionDeployment(issueKeys: string[]) {
   const {
     data: { rejectedDeployments }
   } = await axios.post<DeploymentResponse>(
-    `https://api.atlassian.com/jira/deployments/0.1/cloud/${cloudId}/bulk"`,
+    `https://api.atlassian.com/jira/deployments/0.1/cloud/${cloudId}/bulk`,
     deployment,
     {
       headers: {
