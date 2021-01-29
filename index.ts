@@ -142,8 +142,6 @@ async function informJiraProductionDeployment(issueKeys: string[]) {
     }
   };
 
-  console.log(deployment);
-
   const {
     data: { cloudId }
   } = await axios.get<{ cloudId: string }>(
@@ -154,7 +152,7 @@ async function informJiraProductionDeployment(issueKeys: string[]) {
     data: { rejectedDeployments }
   } = await axios.post<DeploymentResponse>(
     `https://api.atlassian.com/jira/deployments/0.1/cloud/${cloudId}/bulk`,
-    deployment,
+    { deployments: [deployment] },
     {
       headers: {
         Authorization: `Bearer ${await getJiraAccessToken()}`
