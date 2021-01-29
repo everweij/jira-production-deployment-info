@@ -175,8 +175,8 @@ async function createTagForHead() {
     data: { sha }
   } = await octokit.repos.getCommit({
     ref: BRANCH,
-    owner: "everweij",
-    repo: "react-laag"
+    owner: OWNER,
+    repo: REPO
   });
 
   return octokit.git.createTag({

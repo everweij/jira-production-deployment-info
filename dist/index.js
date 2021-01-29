@@ -103,8 +103,8 @@ async function informJiraProductionDeployment(issueKeys) {
 async function createTagForHead() {
     const { data: { sha } } = await octokit.repos.getCommit({
         ref: BRANCH,
-        owner: "everweij",
-        repo: "react-laag"
+        owner: OWNER,
+        repo: REPO
     });
     return octokit.git.createTag({
         owner: OWNER,
